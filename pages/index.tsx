@@ -8,7 +8,7 @@ import { NextPage } from 'next';
 
 const Home: NextPage<{ productList: Array<ProductModel> }> = ({ productList }) => {
   const [page, setPage] = useState(1);
-  const [products, setProducts] = useState(productList);
+  const [products, setProducts] = useState(productList || []);
 
   useEffect(() => {
     if (page > 1) {
